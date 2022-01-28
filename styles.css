@@ -1,0 +1,10 @@
+body {
+    background-color: #4444;
+}
+
+.submitButton {
+    width:100px;
+   display: inline-flexbox;
+    height: 20px;
+   
+}
