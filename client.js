@@ -17,26 +17,21 @@ function employeeList (fNameInput, lNameInput, iInput, tInput, sInput) {
 
 function readyNow() {
     $('.submitButton').on('click', submitButtonDo)
-    $('#inputEmp').on('click', '.emp1', deleteButton)
+    $('#inputEmp').on('click', 'tr', deleteButton)
 }; // end readyNow function
 
 function submitButtonDo() {
     console.log('You added', $('#nameInput').val(),$('#lastInput').val(),$('#idInput').val(),$('#titleInput').val(),$('#annualSalaryInput').val());
-    let first = $('#nameInput').val();
-    let last = $('#lastInput').val();
-    let id = $('#idInput').val();
-    let title = $('#titleInput').val();
-    let annualSalary = $('#annualSalaryInput').val();
+    // let first = $('#nameInput').val();
+    // let last = $('#lastInput').val();
+    // let id = $('#idInput').val();
+    // let title = $('#titleInput').val();
+    // let annualSalary = $('#annualSalaryInput').val();
  
-    employeeList(first,last,id,title,annualSalary);
+    // employeeList(first,last,id,title,annualSalary);
  
-    $('#inputEmp').empty();
-    for (let emp of employees) {
-    $('#inputEmp').append(`<tr class="emp1"><td>${emp.first}</td><<td>${emp.last}</td><td>${emp.id}</td><td>${emp.title}</td><td>${emp.annualSalary}</td><td><button class="addDelete">Delete</button></td></tr>`);
-    // <td>${emp.last}</td><td>${emp.id}</td><td>${emp.title}</td><td>${emp.annualSalary}</td>
-    };
-    // $('#emp0').html($('#nameInput').val());
-
+    
+    $('#inputEmp').append('<tr><td>' + $('#nameInput').val() + '</td><td>' + $('#lastInput').val() + '</td><td>' + + $('#idInput').val() + '</td><td>' + $('#titleInput').val() + '</td><td>' + $('#annualSalaryInput').val() + '</td><td>' + `<button class="deleteButton">DELETE</button></td>` + '<tr>');
     //empty the inputs-boxes
     $('#nameInput').val(''),$('#lastInput').val(''),$('#idInput').val(''),$('#titleInput').val(''),$('#annualSalaryInput').val('');
  
