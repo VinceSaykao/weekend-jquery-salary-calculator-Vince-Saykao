@@ -16,7 +16,7 @@ td,tr {
     padding: 10px;
     width:100px;
     height: 5px;
-    color: blue;
+    color: black;
 }
 
 table {
@@ -27,5 +27,9 @@ table {
 #col0{
     background-color: #4444;
     color: black;
+}
+
+.redText {
+    color: red;
 }
 
