@@ -1,46 +1,43 @@
 $(document).ready(readyNow)
 
-
 let employees = [];
 
-function addEmployee (fNameInput, lNameInput, iInput, tInput, sInput) {
+function newEmployee (fNameInput, lNameInput, iInput, tInput, sInput) {
     const newEmpObject = {
-        first: $(),
+        first: fNameInput,
         last: lNameInput,
         id: Number(iInput),
         title: tInput,
         annualSalary: Number(sInput),
     };
-    addEmployee.push(newEmpObject);
+    employees.push(newEmpObject);
     return true;
 }; // end newEmployeeFunction
 
 function readyNow() {
-    $('.submitButton').on('click', random)
+    $('.submitButton').on('click', submitButtonDo)
 }; // end readyNow function
-
-function random() {
-    let first = $('firstInput').val();
-    $('.submitButton').on('click', submitButtonDo); 
-    submitButtonDo();
-    
-
-};
-
-
 
 function submitButtonDo() {
     console.log('You added', $('#nameInput').val());
     // tr <td>template literal tr
     // $('#theEmpList').empty();
-   
+    let first = $('#nameInput').val();
+    let last = $('#lastInput').val();
+    let id = $('#idInput').val();
+    let title = $('#titleInput').val();
+    let annualSalary = $('#annualSalaryInput').val();
+ 
+    newEmployee(first,last,id,title,annualSalary);
+    $('#inputEmp').empty();
     for (let emp of employees) {
-    $('#tableEmployees').append(`<tr><td>${emp.first}</td></tr>`);
+    $('#inputEmp').append(`<tr><td>${emp.first}</td><td>${emp.last}</td><td>${emp.id}</td><td>${emp.title}</td><td>${emp.annualSalary}</td></tr>`);
     // <td>${emp.last}</td><td>${emp.id}</td><td>${emp.title}</td><td>${emp.annualSalary}</td>
     };
     // $('#emp0').html($('#nameInput').val());
-    // $('#nameInput').val(''),$('#lastInput').val(''),$('#idInput').val(''),$('#titleInput').val(''),$('#annualSalaryInput').val('');
+    $('#nameInput').val(''),$('#lastInput').val(''),$('#idInput').val(''),$('#titleInput').val(''),$('#annualSalaryInput').val('');
     // deleteThis = $('td').append('<button class="addDelete">button</button>')
+   
 };
 
 function deleteButton() {
