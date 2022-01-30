@@ -31,7 +31,7 @@ function submitButtonDo() {
     newEmployee(first,last,id,title,annualSalary);
     $('#inputEmp').empty();
     for (let emp of employees) {
-    $('#inputEmp').append(`<tr><td>${emp.first}</td><td>${emp.last}</td><td>${emp.id}</td><td>${emp.title}</td><td>${emp.annualSalary}</td></tr>`);
+    $('#inputEmp').append(`<tr><td>${emp.first}</td><td>${emp.last}</td><td>${emp.id}</td><td>${emp.title}</td><td>${emp.annualSalary}</td><td><button class="addDelete">Delete</button></td></tr>`);
     // <td>${emp.last}</td><td>${emp.id}</td><td>${emp.title}</td><td>${emp.annualSalary}</td>
     };
     // $('#emp0').html($('#nameInput').val());
