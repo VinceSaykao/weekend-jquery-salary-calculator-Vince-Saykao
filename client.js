@@ -1,5 +1,6 @@
 $(document).ready(readyNow)
 
+// creating employee object/properties information
 class newEmployeeFunction {
     constructor(firstName, lastName, employeeId, title, annualSalary) {
         this.firstName = firstName;
@@ -21,21 +22,21 @@ function readyNow() {
     $('#deleteButton').on('click', handleDelete);
 }; // end readyNow function
 
+// function runs to remove table row of employee when clicked
 function deleteButton() {
     console.log('deleted');
     $(this).remove();
 
 }; // end of deleteButton function
 
+// function runs to delete by ID
     function handleDelete() {
-   
-
 const idToDelete = $("#IdDelete").val();
     $("#IdDelete").val('')
     for (let i = 0; i < employees.length; i++) {
         if (idToDelete === employees[i].employeeId)
             employees.splice(i, 1);
-    }
+    } // end of for loop
     displayEmployees();
     }; // end of handleDelete function
 
@@ -43,18 +44,17 @@ const idToDelete = $("#IdDelete").val();
 // function for actions for what submit button will do when clicked
 function submitButtonDo() {
     console.log('You added', $('#nameInput').val(),$('#lastInput').val(),$('#idInput').val(),$('#titleInput').val(),$('#annualSalaryInput').val());
+    // enters input values
     let newEmployee = new newEmployeeFunction($('#nameInput').val(), $('#lastInput').val(), $('#idInput').val(), $('#titleInput').val(), $('#annualSalaryInput').val());
     employees.push(newEmployee);
     displayEmployees();
     calculateMonthlyCost();
-    
-    
-  
-    
+    // empty input values
     $('#nameInput').val(''),$('#lastInput').val(''),$('#idInput').val(''),$('#titleInput').val(''),$('#annualSalaryInput').val('');
     
 }; // end of submitButtonDo function
 
+// function runs to append values into display employee list by entered inputs
 function displayEmployees() {
     // displays input values
     $('#inputEmp').append(
@@ -83,10 +83,6 @@ function displayEmployees() {
 }; // end of for loop
 }; // end of displayEmployees function
 
-
-
-
-
 // new function for calculating monthly costs
 function calculateMonthlyCost(){
     let sum = 0;
@@ -97,7 +93,7 @@ function calculateMonthlyCost(){
     let num = sum.toFixed(2);
     $('#span').text(num);
     if (num > 20000) {
-        $('#span').css("color", "red");
+        $('#span').css("color", 'red');
     } else {
         $('#span').css("color", 'skyblue');
     } // end if/else
