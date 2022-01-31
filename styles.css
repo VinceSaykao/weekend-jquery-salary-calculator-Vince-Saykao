@@ -18,11 +18,11 @@ td,tr {
     padding: 10px;
     width:100px;
     height: 5px;
-    color: white;
+    color: rgb(0, 0, 0);
     align-content: center;
     text-align: center;
     font-weight: 700;
-    background-color: rgb(73, 41, 67);
+    background-color: rgb(248, 190, 190);
 
     
 }
@@ -67,14 +67,14 @@ table {
 }
 
 #addEmp, #employees {
-    color: black;
+    color: rgb(0, 0, 0);
     font-size: 25px;
-
+    text-decoration-line: underline;
 
 }
 
 #employees {
-    padding-left: 295px;
+    padding-left: 340px;
 }
 
 #deleteButton, .deleteButton {
@@ -87,6 +87,7 @@ table {
 
 #inputsForAll, #IdDelete {
     margin: 10px;
+  
 }
 
 #drow {
@@ -95,18 +96,19 @@ table {
 }
 
 #tableEmployees {
-    display: inline;
-    
+   
 }
 
 #right {
 
        
-        width: 60%;
+        width: 50%;
         height:500px;
         float: left;
-        padding: 1px;
+        padding: 80px;
         text-align:center;
+        padding-top: 45px;
+     
       
       }
 
@@ -123,7 +125,7 @@ table {
 {
     0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
         {
-            color: #ca3c5b;
+            color: #d4254b;
             box-shadow:none;
         }
     18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%

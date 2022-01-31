@@ -95,7 +95,7 @@ function calculateMonthlyCost(){
         sum += (salary.annualSalary / 12);
     } //end for 
     let num = sum.toFixed(2);
-    $('#span').append(num);
+    $('#span').text(num);
     if (num > 20000) {
         $('#span').css("color", "red");
     } else {
