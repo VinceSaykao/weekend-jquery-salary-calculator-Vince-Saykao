@@ -1,7 +1,9 @@
 body {
-    background-image: url(https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png);
+    background-image: url(https://ceblog.s3.amazonaws.com/wp-content/uploads/2017/05/15130907/colors-2-fi.png);
     background-repeat: none;
-};
+}
+
+#invisibleWeirdness
 
 .submitButton {
     width:100px;
@@ -12,16 +14,22 @@ body {
 
 
 td,tr {
-    border: 1px solid rgb(190, 190, 190);
+    border: 1px solid #df59ab;
     padding: 10px;
     width:100px;
     height: 5px;
-    color: black;
+    color: white;
+    align-content: center;
+    text-align: center;
+    font-weight: 700;
+    background-color: rgb(73, 41, 67);
+
+    
 }
 
 table {
-    background-color: #4444;
     color: black;
+    
 }
 
 #col0{
@@ -29,6 +37,103 @@ table {
     color: black;
 }
 
-.redText {
-    color: red;
+
+#moneyBox { 
+    color: rgb(112, 219, 112);
+    text-align: center;
+    border-radius: 100px;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    font-size: 30px;
+    display: inline-block;
+    
 }
+
+#salaryCalc {
+    position: relative;
+    font-size:80px;
+    letter-spacing:20px;
+    text-transform: uppercase;
+    width:100%;
+    text-align: center;
+    line-height: 1em;
+    outline:none;
+    animation: animate 60s linear infinite;
+  
+    
+}
+
+#addEmp, #employees {
+    color: black;
+    font-size: 25px;
+
+
+}
+
+#employees {
+    padding-left: 295px;
+}
+
+#deleteButton, .deleteButton {
+    color: rgb(189, 82, 82);
+}
+
+.submitButton {
+    color: rgb(35, 68, 82);
+}
+
+#inputsForAll, #IdDelete {
+    margin: 10px;
+}
+
+#drow {
+    width: 0%;
+    
+}
+
+#tableEmployees {
+    display: inline;
+    
+}
+
+#right {
+
+       
+        width: 60%;
+        height:500px;
+        float: left;
+        padding: 1px;
+        text-align:center;
+      
+      }
+
+      li {
+          list-style-type: none;
+      }
+
+
+
+
+   
+   
+    @keyframes animate 
+{
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+        {
+            color: #ca3c5b;
+            box-shadow:none;
+        }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+{
+    color: #fff;
+    text-shadow: 0 0 10px rgb(32, 164, 204),
+                 0 0 20px rgb(32, 164, 204),
+                 0 0 40px rgb(32, 164, 204),
+                 0 0 80px rgb(32, 164, 204),
+                 0 0 160px rgb(32, 164, 204);
+}
+};
+

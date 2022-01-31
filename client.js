@@ -28,7 +28,10 @@ function deleteButton() {
 }; // end of deleteButton function
 
     function handleDelete() {
+   
+
 const idToDelete = $("#IdDelete").val();
+    $("#IdDelete").val('')
     for (let i = 0; i < employees.length; i++) {
         if (idToDelete === employees[i].employeeId)
             employees.splice(i, 1);
@@ -74,7 +77,7 @@ function displayEmployees() {
     for (let employee of employees) {
 
         let outputString = '<tr class="table-dark">';
-        outputString += '<td>' + employee.firstName + '</td>' + '<td>' + employee.lastName + '</td>' + '<td>' + employee.employeeId + '</td>' + '<td>' + employee.title + '</td>' + '<td class="yearCash" >' + employee.annualSalary + '</td>' + '<td>' + `<button class="deleteButton">DELETE</button>` + '</td>' + '</tr>';
+        outputString += '<td>' + employee.firstName + '</td>' + '<td>' + employee.lastName + '</td>' + '<td>' + employee.employeeId + '</td>' + '<td>' + employee.title + '</td>' + '<td class="yearCash" >' + employee.annualSalary + '</td>' + '<td id ="drow">' + `<button class="deleteButton">Delete</button>` + '</td>' + '</tr>';
         el.append(outputString);
 
 }; // end of for loop
@@ -94,9 +97,9 @@ function calculateMonthlyCost(){
     let num = sum.toFixed(2);
     $('#span').append(num);
     if (num > 20000) {
-        $('#span').css("background-color", "red");
+        $('#span').css("color", "red");
     } else {
-        $('#span').css("background-color", '#skyblue');
+        $('#span').css("color", 'skyblue');
     } // end if/else
 } // end calculateSalary
 

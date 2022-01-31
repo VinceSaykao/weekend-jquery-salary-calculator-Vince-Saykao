@@ -12,50 +12,70 @@
     </head>
     <body>
       <header>
-          <div id="salaryCalc"><strong>Salary Calculator</strong></div>
+          <div id="salaryCalc">Salary Calculator</div>
       </header>
       <main>
 
-        <!-- add employee id -->
-        <div id="addEmp"><b>Add Employee</b></div>
-        <!-- Input Id for all -->
-        <div id="inputsForAll">
-        <input id="nameInput" type="text" placeholder="First Name"/>
-        <input id="lastInput" type="text" placeholder="Last Name"/>
-        <input id="idInput" type="text" placeholder="ID"/>
-        <input id="titleInput" type="text" placeholder="Title"/>
-        <input id="annualSalaryInput" type="text" placeholder="Annual Salary"/>
-        <button class="submitButton">Submit</button>
+        
+
+        <div id="employees"><b>Employees</b></div>
+          <!-- table headers  -->
+           <div id="right">
+          <table id="tableEmployees">
+            <tr>
+            <td id="colFirst">First Name</td>
+            <td id="colLast">Last Name</td>
+            <td id="colId">ID</td>
+            <td id="colTitle">Title</td>
+            <td id="colAnnual">Annual Salary</td>
+            </tr>
+            </table>
+            <table id = "inputEmp">
+        </table>
+           </div>
+
+           <div id="left">
+        <div id="moneyBox">
+            <h4 id="totalMoney">Total Monthly Salaries: $<span id="span">0.00</span></h4>
         </div>
 
-        <br><br>
-        <div id="employees">Employees</div>
+        <!-- add employee id -->
+        <div id="addEmp"><b>Add Employee</b></div>
+        
+        <!-- Input Id for all -->
+        <div id="inputsForAll">
+            <ul>
+       <li> <input id="nameInput" type="text" placeholder="First Name"/></li>
+        <li><input id="lastInput" type="text" placeholder="Last Name"/></li>
+        <li><input id="idInput" type="number" placeholder="ID"/></li>
+        <li><input id="titleInput" type="text" placeholder="Title"/></li>
+        <li><input id="annualSalaryInput" type="number" placeholder="Annual Salary"/></li>
+        <li><button class="submitButton"><b>Submit</b></button>
+    </ul>
+        </div>
 
     
-        <!-- table headers  -->
-           
-            <table id="tableEmployees">
-                <tr>
-                <td id="colFirst">First Name</td>
-                <td id="colLast">Last Name</td>
-                <td id="colId">ID</td>
-                <td id="colTitle">Title</td>
-                <td id="colAnnual">Annual Salary</td>
-                </tr>
-                </table>
-                <table id = "inputEmp">
-            </table>
 
-            <section>
-                <input type="text" placeholder="ID Number To Delete" id="IdDelete">
-                <button id="deleteButton">DELETE EMPLOYEE</button>
-            </section>
+        <section>
+            <input type="text" placeholder="Delete By ID" id="IdDelete">
+            <button id="deleteButton"><b>Delete Employee</b></button>
+        </section>
+    
+      
+       
+  
+
+           </div>
+      
+
+    
+      
+
+         
         
 
 
-            <div id="moneyBox">
-                <h4 id="totalMoney">Total Monthly Salaries: $<span id="span">0.00</span></h4>
-            </div>
+        
 
 
       </main>
