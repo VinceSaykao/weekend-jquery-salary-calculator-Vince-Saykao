@@ -29,9 +29,9 @@ function submitButtonDo() {
     // let annualSalary = $('#annualSalaryInput').val();
  
     // employeeList(first,last,id,title,annualSalary);
- 
+   
     
-    $('#inputEmp').append('<tr><td>' + $('#nameInput').val() + '</td><td>' + $('#lastInput').val() + '</td><td>' + + Number($('#idInput').val()) + '</td><td>' + $('#titleInput').val() + '</td><td>' + Number($('#annualSalaryInput').val()) + '</td><td>' + `<button class="deleteButton">DELETE</button></td>` + '<tr>');
+    $('#inputEmp').append('<tr><td>' + $('#nameInput').val() + '</td><td>' + $('#lastInput').val() + '</td><td>' + Number($('#idInput').val()) + '</td><td>' + $('#titleInput').val() + '</td><td>' + Number($('#annualSalaryInput').val()) + '</td><td>' + `<button class="deleteButton">DELETE</button>` + '</td></tr>');
     //empty the inputs-boxes
     $('#nameInput').val(''),$('#lastInput').val(''),$('#idInput').val(''),$('#titleInput').val(''),$('#annualSalaryInput').val('');
  
